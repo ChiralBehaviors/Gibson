@@ -1,0 +1,119 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.chiralbehaviors.gibson</groupId>
+    <artifactId>gibson.app</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>Gibson umbrella project</name>
+    <description>Ultrastructure platform for gaming</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <licenses>
+        <license>
+            <name>Affero General Public License V3</name>
+            <url>http://www.gnu.org/licenses/</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Hal Hildebrand</name>
+            <email>hal.hildebrand@me.com</email>
+            <organization>Chiral Behaviors</organization>
+        </developer>
+        <developer>
+            <name>Halloran Parry</name>
+            <email>halloran.parry@gmail.com</email>
+            <organization>Chiral Behaviors</organization>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>git://github.com/ChiralBehaviors/Gibson.git</connection>
+        <url>https://github.com/ChiralBehaviors/Gibson</url>
+    </scm>
+
+
+    <repositories>
+        <repository>
+            <id>chiralbehaviors-snapshots</id>
+            <url>http://repository-chiralbehaviors.forge.cloudbees.com/snapshot/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>chiralbehaviors-release</id>
+            <url>http://repository-chiralbehaviors.forge.cloudbees.com/release/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <resources>
+        <resource>
+            <directory>src/main/resources</directory>
+            <filtering>true</filtering>
+        </resource>
+    </resources>
+    <testResources>
+        <testResource>
+            <directory>src/test/resources</directory>
+            <filtering>true</filtering>
+        </testResource>
+        <testResource>
+            <directory>src/test/generated-resources</directory>
+            <filtering>true</filtering>
+        </testResource>
+    </testResources>
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <testResources>
+            <testResource>
+                <directory>src/test/resources</directory>
+                <filtering>true</filtering>
+            </testResource>
+            <testResource>
+                <directory>src/test/generated-resources</directory>
+                <filtering>true</filtering>
+            </testResource>
+        </testResources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                            <goal>test-jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <attach>true</attach>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

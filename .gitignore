@@ -1,0 +1,15 @@
+**/.project
+**/.settings
+**/.classpath
+**/target
+**/.DS_Store
+**/dependency-reduced-pom.xml
+**/dependency-reduced-pom-*.xml
+/derby.log
+/.settings
+/.project
+/db.changelog.xml
+/.DS_Store
+**/.metadata
+/.metadata/*
+**/.factorypath
